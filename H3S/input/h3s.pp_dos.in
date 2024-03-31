@@ -1,0 +1,17 @@
+! Postprocessing of DOS calculation
+! Adjust variables 'prefix' and 'outdir' to
+! correspond to the SCF/non-SCF calculations.
+
+&dos
+  prefix = 'h3s-im-3m'
+  outdir = './h3s-bcs/'
+  DeltaE = 0.01
+! Switch on tetrahedron interpolation method
+! by commenting out the following two lines:
+!  ngauss = 0
+!  degauss = 0.040
+
+! Adjust name of output file here if so desired
+  fildos  = 'h3s_dos_tetra.dat'
+/
+

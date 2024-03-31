@@ -1,0 +1,30 @@
+ &control
+    calculation='scf'
+    restart_mode='from_scratch',
+    prefix='h3s-im-3m',
+    pseudo_dir = './',
+    outdir='h3s-bcs/'
+ /
+ &system
+    space_group = 229,
+    celldm(1) = 5.63894,
+    ntyp= 2,
+    nat= 2,
+    ecutwfc = 80.0,
+    occupations='smearing',  
+    smearing='methfessel-paxton', 
+    degauss=0.05,
+ /
+ &electrons
+    conv_thr =  1.0d-8
+    mixing_beta = 0.7
+ /
+ATOMIC_SPECIES
+ H  1.008 H.pbe-van_bm.UPF
+ S  32.06 S.pbe-van_bm.UPF
+ATOMIC_POSITIONS {crystal_sg}
+H 0.0000 0.5000 0.5000
+S 0.5000 0.5000 0.5000
+K_POINTS {automatic} 
+ 3 3 3 0 0 0
+
